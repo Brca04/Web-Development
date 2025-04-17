@@ -1,0 +1,169 @@
+body {
+    font-family: sans-serif;
+    background-color: white;
+    box-sizing: border-box;
+    height: 100%;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: 150px 1fr 150px;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "header header header"
+      "aside main main"
+      "aside main main";
+    gap: 10px;
+    min-height: 100vh;
+  }
+  
+  header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 150px 1fr 150px;
+    grid-gap: 10px;
+  }
+
+  #Logo{
+    height: 110px;
+    width: 148px;
+    border-radius: 10px;
+    border: 1px solid black;
+  }
+
+  .Trenutno{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    border: 1px solid #ccc;
+  }
+
+  .CartBox {
+    display: flex;
+    align-items: center; /* vertical centering */
+    justify-content: center; /* optional: horizontal centering */
+  }
+
+  .FlexCart{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    gap: 10px;
+    align-items: center; /* vertical centering */
+    justify-content: center;
+  }
+
+  main {
+    grid-area: main;
+    padding: 10px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    border: 1px solid #ccc;
+  }
+    
+  .Slika{
+    text-align: center;
+    border: 1px solid black;
+  }
+  
+  #SlikaAuta{
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .Prodaja{
+    align-items: center;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+
+  .ProdajaEl {
+    text-align: center;
+    order: 1px solid #ccc;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+
+  .ProdajaEl:hover {
+    text-align: center;
+    order: 1px solid #ccc;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+    border: 10px solid #ccc;
+    border-radius: 10px;
+  }
+   
+  .FlexProdaja{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .FlexProdajaEl{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .SlikaProdaja{
+    border: 1px solid #ccc;
+  }
+
+  aside {
+    grid-area: aside;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    gap: 10px;
+    text-align: left;
+  }
+
+  .asideFlex{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .Kontakt {
+    height: min-content;
+    text-align: center;
+    text-decoration: underline;
+    border-radius: 10px;
+    padding-left: 10px;
+  }
+
+  .Kategorije {
+    background-color: white;
+    align-items: left;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    text-align: center;
+    background-color: hsl(0, 0%, 76%);
+    border: 2px solid #ccc;
+    padding: 10px;
+    margin: 5px 0;
+    word-wrap: inherit;
+    font-size: 13px;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, font-weight 0.3s ease; 
+  }
+
+  li:hover {
+    cursor: pointer;
+    font-weight: bold;
+    background-color: hsl(0, 0%, 66%);
+  }
