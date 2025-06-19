@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Store</title>
-    <link rel = "stylesheet" href="style.css">
+    <title>🚗Auti.com</title>
+    <link rel = "stylesheet" href="CSS/style.css">
+    <script src="data.js"></script>
+    <script src="app.js"></script>
 </head>
 <body>
     <div class="container">
         <header>
+        <div class="headerGrid">
           <div class="LogoBox">
             <img src="images/logo2.png" alt="Logo" id = "Logo">
           </div>
-          <div class="Trenutno"><div>
+          <div class="TrenutnoGrid"><div>
             Trenutno otvorena
             </div>
           </div>
@@ -26,11 +29,14 @@
               </div>
             </div>
           </div>
+        </div>
         </header>
 
         <main>
+          <div class="mainGrid">
           <div class="Slika">
-              <img src="images/race.jpg" alt="SlikaAuta" id = "SlikaAuta">
+              <img src="images/deal3.jpg" alt="SlikaSalona" id = "SlikaAuta">
+              <div class="Pozdrav">Dobrodošli!</div>
           </div>
           <div class="Prodaja">
             <div class="FlexProdaja">
@@ -71,23 +77,22 @@
               </div>
             </div>
           </div>
-        </main>
-
-        <aside>
-          <div class="asideFlex">
-            <div class="Kategorije">
-              <ul>
-                <li>Audi</li>
-                <li>Alfa&Romeo</li>
-                <li>BMW</li>
-                <li>Ferrari</li>
-                <li>Hyundai</li>
-                <li>Lamborghini</li>
-                <li>Mercedes&<wbr>Benz</li>
-                <li>Toyota</li>
-                <li>Volvo</li>
-                <li>VW</li>
-            </div>
+          <div class="asideGrid">
+            <div class="KategorijeKontaktFlex">
+              <div class="Kategorije">
+                <ul>
+                  <li id="1">Audi</li>
+                  <li id="2">Alfa&Romeo</li>
+                  <li id="3">BMW</li>
+                  <li id="4">Ferrari</li>
+                  <li id="5">Hyundai</li>
+                  <li id="6">Lamborghini</li>
+                  <li id="7">Mercedes&<wbr>Benz</li>
+                  <li id="8">Toyota</li>
+                  <li id="9">Volvo</li>
+                  <li id="10">VW</li>
+                </ul>
+              </div>
               <div class="Kontakt">
                 <p>Kontakt</p>
                 <p>Newsletter</p>
@@ -95,7 +100,9 @@
               </div>
             </div>
           </div>
-        </aside>
+          </div>
+        </div>
+        </main>
       </div>   
 </body>
 </html>
