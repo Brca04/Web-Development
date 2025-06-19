@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🚗Auti.com</title>
+  <link rel="stylesheet" href="/styles/style.css">
+  <script src="/scripts/shop.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <%- include("partials/header") %>
+    <main>
+      <div class="mainGrid">
+        <div class="Slika">
+          <div class="Pozdrav">Dobrodošli!</div>
+        </div>
+        <div class="Prodaja">
+          <div class="FlexProdaja">
+            <% products.forEach((product, i) => { %>
+              <div class="ProdajaEl">
+                <div class="FlexProdajaEl">
+                  <div class="Brojac">
+                    <% 
+                      const cartItem = cart.find(item => item.id === product.id);
+                      const qty = cartItem ? cartItem.quantity : 0;
+                    %>
+                    <span 
+                      class="product-counter<%= qty === 0 ? ' zero' : '' %>" 
+                      id="product-counter-<%= product.id %>" 
+                      data-id="<%= product.id %>"
+                    ><%= qty > 0 ? qty : '' %></span>
+                  </div>
+                  <div class="SlikaProdaja">
+                    <img src="<%= product.image %>" alt="<%= product.name %>">
+                  </div>
+                  <div class="CartSell">
+                    <img src="/images/shopping_cart_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="cart-icon" class="cartSellIcon" data-id="<%= product.id %>">
+                  </div>
+                  <div class="Proizvod"><%= product.name %></div>
+                  <div class="KategorijaEl"><%= product.category %></div>
+                </div>
+              </div>
+            <% }) %>
+          </div>
+        </div>
+        <div class="asideGrid">
+          <div class="KategorijeKontaktFlex">
+            <div class="Kategorije">
+              <ul>
+                <% categories.forEach((category, index) => { %>
+                  <li id="kat-<%= index %>">
+                    <a href="/home/getProducts/<%= index %>"><%= category %></a>
+                  </li>
+                <% }) %>
+              </ul>
+            </div>
+            <%- include("partials/footer") %>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

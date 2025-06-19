@@ -1,0 +1,313 @@
+body {
+    font-family: sans-serif;
+    background-color: black;
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+    padding: 10px;
+    margin-right: 5px;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-gap: 10px;
+}
+
+.Zaglavlje {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-gap: 10px;
+}
+
+.LogoBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+#Logo {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.Trenutno {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    border-radius: 10px;
+    border: 5px solid #3a3936;
+    background-color: #585652;
+}
+
+.CartBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 5px solid #3a3936;
+    background-color: #585652;
+}
+
+.FlexCart {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+#KosaricaTxt {
+    font-size: 36px;
+    color: white;
+    text-align: center;
+}
+
+.Flexx{
+    display: flex;
+    border: 5px solid #3a3936;
+    padding: 10px;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: top;
+    gap: 12px;
+    
+}
+
+.StanjeFlex {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    border-radius: 10px;
+    border: 5px solid #3a3936;
+    background-color: #585652;
+    gap: 12px;
+    font-size: 2em;
+}
+
+.Kosarica {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    padding: 20px;
+    border-radius: 10px;
+    border: 5px solid #3a3936;
+    background-color: #585652;
+    text-align: center;
+}
+
+.Cart{
+    position: relative;
+}
+
+.StanjeFlex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.SlikaProizvoda {
+  margin: 0 4px;
+  padding: 0;
+}
+
+.SlikaProizvoda img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 5px solid #444;
+  display: block;
+  box-sizing: border-box;
+}
+
+.Kolicina {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  min-width: 50px;
+}
+
+.CartRow {
+  background: #585652;
+  gap: 10px;
+}
+
+.CartImg {
+  position: relative;
+}
+
+.CartMainImg {
+  width: 100%;
+  display: block;
+}
+
+.CartIconImg {
+  position: absolute;
+  left: 45%;
+  width: 20%;
+  height: 10%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.CartImg:hover .CartIconImg {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.CartRowCustom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  background: #585652;
+  gap: 12px;
+}
+
+.CartRowCustom:not(:last-child) {
+  border-bottom: 2px solid #3a3936;
+  margin-bottom: 8px;
+  padding-bottom: 16px;
+}
+
+.CartRowTop {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+
+.CartRowImg {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  border: 5px solid #3a3936;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  padding: 0;
+  align-self: flex-start;
+}
+
+.CartRowName {
+    color: white;
+    font-weight: bold;
+    text-align: left;
+}
+
+.CartRowBottom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  width: 100%;
+}
+
+
+.HeaderBrojac2 {
+  display: inline-flex;
+  bottom: 45%;
+  left: 50%;
+  position: absolute;
+  background-color: black;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.Kolicina button,
+.plus-btn,
+.minus-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 2em;
+  border: none;
+  background: #3a3936;
+  color: white;
+  cursor: pointer;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Kolicina button:hover,
+.plus-btn:hover,
+.minus-btn:hover {
+  background: #222;
+  font-weight: bold;
+}
+
+.KolicinaCentar {
+  margin: 0 16px;
+  min-width: 40px;
+  text-align: center;
+  color: white;
+  font-size: 1.5em;
+  display: inline-block;
+}
+
+@media screen and (max-width: 1023px) {
+    .container {
+        display: grid;
+        grid-template-rows: 300px 1fr;
+        grid-gap: 20px;
+    }
+
+    .Zaglavlje {
+        grid-template-columns: 1fr 150px;
+        grid-template-rows: 150px 150px;
+    }
+
+    .Trenutno {
+        grid-column: -3 / -2;
+        grid-row: 2 / 3;
+    }
+
+    .CartBox {
+        grid-column: -2 / -1;
+        grid-row: 2 / 3;
+        justify-content: center;
+    }
+
+    .LogoBox {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    #Logo {
+        width: 20%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 10px;
+    }
+}
+

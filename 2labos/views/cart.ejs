@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Košarica</title>
+  <link rel="stylesheet" href="/styles/styleCart.css">
+  <script src="/scripts/shop.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="Zaglavlje">
+        <div class="LogoBox">
+          <a href="/">
+            <img src="/images/logo2.png" alt="Logo" id="Logo" />
+          </a>
+        </div>
+        <div class="Trenutno">Vaša narudžba</div>
+        <div class="CartBox">
+          <div class="FlexCart">
+            <div class="Cart">
+              <a href="/cart/getAll">
+                <img src="/images/shopping_cart_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="Cart icon" />
+                <span class="HeaderBrojac2" id="HeaderBrojac2"><%= cartCount || 0 %></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="Kosarica">
+        <p id="KosaricaTxt">Košarica</p>
+        <div class="Flexx">
+          <% cartItems.forEach(item => { %>
+            <div class="Stanje">
+              <div class="StanjeFlex">
+                <div class="SlikaProizvoda">
+                  <img src="<%= item.image %>" alt="<%= item.name %>" />
+                </div>
+                <div class="NazivProizvoda"><%= item.name %></div>
+                <div class="Kolicina">
+                  <button class="minus-btn" data-id="<%= item.id %>">-</button>
+                  <span class="KolicinaCentar" id="kolicina-<%= item.id %>"><%= item.quantity %></span>
+                  <button class="plus-btn" data-id="<%= item.id %>">+</button>
+                </div>
+              </div>
+            </div>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+  </header>
+</body>
+</html>

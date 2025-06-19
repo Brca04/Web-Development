@@ -1,0 +1,479 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: black;
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  padding-top: 10px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: auto 80% auto auto;
+  grid-template-areas:
+    "header header header"
+    "main main main"
+    "main main main";
+  gap: 10px;
+  min-height: 100vh;
+}
+
+header {
+  grid-area: header;
+}
+
+.headerGrid {
+  padding: 0 10px;
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  gap: 10px;
+}
+
+.LogoBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 10px;
+}
+
+#Logo {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.TrenutnoGrid {
+  display: grid;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  text-decoration: underline;
+  border-radius: 10px;
+  border: 5px solid #3a3936;
+  background-color: #585652;
+}
+
+.CartBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 5px solid #3a3936;
+  background-color: #585652;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.Cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  position: relative;
+}
+
+.FlexCart {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  grid-area: main;
+  padding: 10px;
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 60% auto;
+  gap: 10px;
+}
+
+.Slika {
+  position: relative;
+  min-height: 300px;
+  background-image: url('/images/deal3.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #3a3936;
+}
+
+#SlikaAuta {
+  position: relative;
+
+  object-fit: contain;
+  border-radius: 10px;
+  -webkit-mask-image:
+    linear-gradient(to top, transparent 0%, black 15%, black 85%, transparent 100%),
+    linear-gradient(to left, transparent 0%, black 15%, black 85%, transparent 100%);
+  -webkit-mask-composite: intersect;
+
+  mask-image:
+    linear-gradient(to top, transparent 0%, black 15%, black 85%, transparent 100%),
+    linear-gradient(to left, transparent 0%, black 15%, black 85%, transparent 100%);
+  mask-composite: intersect;
+}
+
+.Pozdrav {
+  position: absolute;
+  left: 3%;
+  top: 5%;
+  color: white;
+  font-size: 5em;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px 40px;
+  border-radius: 12px;
+}
+
+.Prodaja {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  align-items: center;
+  text-align: center;
+  background-color: #585652;
+  border-radius: 10px;
+  border: 5px solid #3a3936;
+}
+
+.FlexProdaja {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.ProdajaEl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: #585652;
+  border-radius: 10px;
+  padding: 60px;
+  box-sizing: border-box;
+  color: #fff;
+  gap: 18px;
+  position: relative;
+}
+
+.FlexProdajaEl {
+  gap: 20px;
+  font-size: 30px;
+}
+
+.SlikaProdaja img {
+  max-width: 100%;
+  aspect-ratio: 220 / 160;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 10px solid black;
+}
+
+.SlikaProdaja {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.CartSell {
+  display: none;
+  position: absolute; 
+  width: 48px;
+  height: 35px;
+  bottom: 30%;
+  left: 45%;
+  cursor: pointer;
+  background-color: black;
+  border-radius: 10%;
+  border: 3px solid black;
+}
+
+.ProdajaEl:hover .CartSell {
+  display: block;
+}
+
+.product-counter {
+  color: white;
+  background: black;
+  border-radius: 100%;
+  width: 36px;
+  height: 36 px;
+  position: absolute;
+  top: 12%;
+  right: 13%;
+  font-size: 0.8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.asideGrid {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  min-height: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.KategorijeKontaktFlex {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Kategorije {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #585652;
+  border-radius: 10px;
+  border: 5px solid #3a3936;
+  min-height: 70%;
+  height: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.Kategorije ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.Kategorije li {
+  font-size: 1.7em;
+  padding: 28px 0;
+  margin: 10px 0;
+  border-radius: 18px;
+  color: white;
+  text-align: center;
+  background-color: #585652;
+  padding: 17px;
+  margin: 5px 0;
+  font-size: 1.3em;
+  border-radius: 15px;
+  color: white;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.Kategorije li:hover {
+  background-color: #3a3936;
+  transition: background-color 0.3s ease;
+}
+
+footer {
+  height: min-content;
+  text-align: center;
+  text-decoration: underline;
+  color: white;
+  background-color: #585652;
+  border-radius: 10px;
+  border: 5px solid #3a3936;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Search,
+.Cart:hover {
+  cursor: pointer;
+}
+
+.HeaderBrojac {
+  display: inline-flex;
+  align-items: left;
+  position: absolute;
+  bottom: 45%;
+  left: 51%;
+  background-color: black;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 60%;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.product-counter {
+  display: flex;
+  border-radius: 100%;
+  height: 7%;
+  width: 7%;
+  position: absolute;
+  top: 16%;
+  right: 15%;
+}
+
+.product-counter:empty,
+.product-counter.zero {
+  display: none;
+}
+
+
+@media screen and (max-width: 1023px) {
+  .container {
+    grid-template-columns: 150px 1fr 150px;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "header header header"
+      "main main main";
+  }
+
+  .headerGrid {
+    grid-template-rows: 150px 150px;
+    grid-template-columns: 1fr 150px;
+    text-align: center;
+  }
+
+  .LogoBox {
+    width: 20%;
+    align-items: center;
+  }
+
+  #Logo {
+    grid-column: -3 / -2;
+    margin: 0 auto;
+  }
+
+  .TrenutnoGrid {
+    grid-column: -3 / -2;
+    grid-row: 2 / 3;
+    font-size: 30px;
+  }
+
+  .CartBox {
+    justify-content: center;
+    grid-column: -2 / -1;
+    grid-row: 2 / 3;
+  }
+
+  .mainGrid {
+    grid-template-rows: 1fr auto;
+  }
+
+  .Slika {
+    grid-column: 1 / 3;
+    grid-row: -2 / -3;
+    padding: 5px;
+    min-height: 150px;
+  }
+
+  #SlikaAuta {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+  }
+
+  .Pozdrav {
+    font-size: 250%;
+    top: 5%;
+    left: 5%;
+  }
+
+  .FlexProdaja {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .ProdajaEl {
+    width: 60%;
+  }
+
+  .asideGrid {
+    grid-column: -3 / -2;
+    grid-row: 2 / 3;
+  }
+
+  .Kategorije ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .Kontakt {
+    font-size: 14px;
+    padding: 5px;
+    width: 110px;
+  }
+
+  .headerGrid img {
+    height: auto;
+    width: 100px;
+  }
+
+  .Cart img,
+  .Search img {
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .CartSell {
+    display: none;
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    bottom: 43%;
+    left: 42%;
+    cursor: pointer;
+    background-color: black;
+    border-radius: 10%;
+    border: 3px solid black;
+  }
+}

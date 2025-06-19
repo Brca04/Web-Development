@@ -1,0 +1,29 @@
+<header>
+      <div class="headerGrid">
+        <div class="LogoBox">
+          <a href="/home/getCategories">
+          <img src="/images/logo2.png" alt="Logo" id="Logo">
+          </a>
+        </div>
+        <div class="TrenutnoGrid">
+          <% if (products.length && products[0].category) { %>
+            <%= products[0].category %>
+          <% } else { %>
+            Odaberite Proizvođača
+          <% } %>
+        </div>
+        <div class="CartBox">
+          <div class="FlexCart">
+            <div class="Cart">
+              <a href="/cart/getAll">
+                <img src="/images/shopping_cart_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="Cart icon">
+                <span class="HeaderBrojac" id="HeaderBrojac"><%= cartCount || 0 %></span>
+              </a>
+            </div>
+            <div class="Search">
+              <img src="/images/search_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="Search icon">
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
